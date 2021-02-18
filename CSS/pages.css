@@ -1,0 +1,278 @@
+body{
+    padding: 0 var(--padding-body);
+    --padding-body: 150px;
+    --medium-padding-body: 100px;
+    background: var(--background-body);
+    --background-body: #322a33;
+}
+
+a[name="top"] {
+    display: block;
+    border: 0;
+    opacity: 0;
+    position: relative;
+    z-index: -500;
+    padding-top: var(--medium-padding-body);
+}
+
+a[name="bottom"] {
+    display: block;
+    border: 0;
+    opacity: 0;
+    position: relative;
+    z-index: -500;
+    margin-top: var(--padding-body);
+}
+
+
+
+
+
+/*- - - - - HEADER - - - - -*/
+
+h1 {
+    color: var(--h1);
+}
+
+h1 + st.block {
+    margin-top: 60px;
+
+    color: var(--h4);
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    max-height: 30vh;
+    background: var(--background-body);
+    margin: var(--bg) 0;
+    padding: var(--bg);
+    overflow: auto;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    text-align: center;
+}
+
+#pages_nav {
+    width: calc(100% + 2 * var(--padding-body));
+    margin-left: calc(-1 * var(--padding-body));
+}
+
+nav li, footer li, ul.big li {
+    display: inline-block;
+    margin: 0 var(--bg);
+}
+
+nav a, a.big, ul.big a {
+    padding: 0 var(--mo) var(--sm);
+    border-bottom: 4px solid;
+}
+
+nav a, footer a, a.big, ul.big a {
+    color: var(--color);
+    --color: var(--h4);
+
+    line-height: 30px;
+}
+
+nav a.selected, footer a.selected, a.big.selected, ul.big a.selected {
+    --color: var(--h1);
+}
+
+footer {
+    width: 100%;
+    background:var(--background-body);
+    padding: var(--mo) var(--bg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+#menu_page footer {
+    width: calc(100% - var(--width-slider));
+    left: var(--width-slider);
+}
+
+footer a {
+    border-bottom: 0 !important;
+}
+
+#credits {
+    flex: 0 0 auto;
+}
+
+
+
+
+
+/*- - - - - MAIN - - - - -*/
+
+#first_element {
+    margin-top: var(--padding-body);
+}
+
+.folio.avatar {
+    --max: 250px;
+    grid-gap: var(--medium-padding-body);
+}
+
+
+
+
+
+/*- - - - - COLOR PICKER - - - - -*/
+
+.color_picker {
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    left: 20px;
+}
+
+.color_picker input {
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    padding: 0;
+    border: 0 20px 0 0;
+    border-radius: 0;
+    outline: none;
+    font-size
+}
+
+
+
+
+
+/*- - - - - MENU PAGE - - - - -*/
+
+#menu_page {
+    --width-slider: 30%;
+}
+
+#menu_page::before {
+    display: block;
+    content: '';
+    width: var(--width-slider);
+    height: 100vh;
+    background: url(../img/DANSEMACABRE/1.png) 50% 50% / cover;
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 0;
+}
+
+#menu_page main {
+    padding-left: var(--width-slider);
+}
+
+
+
+
+
+/*- - - - - CREATIONS PAGE - - - - -*/
+
+
+
+
+
+/*- - - - - GENERAL*/
+
+.headers-column {
+    --column-gap: 50px;
+}
+
+.closeup {
+    position: relative;
+}
+
+.closeup > img {
+    display: block;
+}
+
+.closeup aside {
+    width: var(--width-aside-closeup);
+    --width-aside-closeup: 30%;
+    height: var(--height-aside-closeup);
+    --height-aside-closeup: 30%;
+    padding: var(--sm);
+    position: absolute;
+    cursor: auto;
+    top: calc(0.5 * (100% - var(--height-aside-closeup)));
+    left: calc(-0.8 * var(--column-gap));
+
+    color: var(--main-color);
+    text-align: left;
+
+}
+
+.closeup aside * {
+    font-size: calc(var(--scale) * var(--main-font-size));
+    line-height: calc(var(--scale) * var(--main-line-height));
+    --scale: 0.8;
+}
+
+.closeup aside:hover {
+    background: rgba(20, 20, 20, .8);
+}
+
+
+
+
+
+/*- - - - - JS RELATED*/
+
+.closeup .cover {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-body);
+    padding: var(--mo);
+    cursor: auto;
+
+    position: fixed;
+    z-index: 15000;
+    top: 0;
+    left: 0;
+
+    color: var(--h3);
+    text-align: center;
+}
+
+.closeup .fixed-div {
+    width: 100%;
+    height: var(--height);
+    --height: 80vh;
+    position: fixed;
+    top: 7vh;
+    left: 0;
+
+    position: relative;
+}
+
+.closeup .fixed-div img {
+    display: block;
+    width: auto;
+    max-width: 80vw;
+    max-height: 100%;
+    margin: auto;
+    cursor: crosshair;
+}
+
+
+
+
+
+/*- - - - - @MEDIA - - - - -*/
+
+@media only screen and (max-width: 1200px) {
+    body {
+        --padding-body: 80px;
+        --medium-padding-body: 50px;
+    }
+}

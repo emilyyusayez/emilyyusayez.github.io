@@ -10,18 +10,10 @@ HTML *{
   --transt: .4s;
 }
 
-
-
-
-
 /* - - - - - GENERAL - - - - - */
 
 HTML, HTML *{
   box-sizing: border-box;
-}
-
-body{
-    padding: 50px;
 }
 
 scroll{
@@ -94,16 +86,29 @@ table{
 
 .column{
   column-count: 2;
-  column-gap: 25px;
+  column-gap: var(--column-gap);
+  --column-gap: var(--bg);
+}
+
+.column.three {
+    column-count: 3;
 }
 
 .column.rule{
   column-gap: 40px;
-  column-rule: 1px solid var(--l4);
+  column-rule: 1px solid var(--m2);
 }
 
-.column *{
+.column > *{
   break-inside: avoid;
+}
+
+.column > a, .column span {
+    display: block;
+}
+
+.column > *:not(:last-child) {
+    margin-bottom: var(--column-gap) !important;
 }
 
 k{
@@ -213,21 +218,13 @@ k img{
 .extend, fill{
     flex: 1 1 auto;
 }
+}
 
 
 
 
 
 /* - - - - - BLOCKS - - - - - */
-
-.simple{
-  margin: var(--grid-gap) 0;
-  padding: var(--mo);
-}
-
-.small{
-  padding: var(--sm);
-}
 
 .nomargin{
   margin: 0 !important;
@@ -242,27 +239,19 @@ k img{
 }
 
 ul.nobullet{
-    list-style-type: 0;
+    list-style-type: none !important;
     padding: 0;
     margin: 0;
 }
 
+a.nostyle {
+    color: unset !important;
+    border: unset !important;
+    cursor: unset !important;
+}
+
 .hidden{
     display: none;
-}
-
-.light{
-  background: var(--l1);
-}
-
-.middle{
-  background: var(--m1);
-}
-
-.dark{
-  background: var(--d1);
-
-  color: var(--l4);
 }
 
 .h1{

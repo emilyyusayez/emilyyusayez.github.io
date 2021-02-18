@@ -1,51 +1,82 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 
-    <title>Your title page</title>
-    <link rel="icon" href="https://img.icons8.com/small/16/000000/small-hearts.png">
+    <title>PORTFOLIO</title>
+    <link rel="icon" href="./img/icone/1.png">
     <meta content="text/html;charset=UTF-8" http-equiv="Content-type" />
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@200&family=Oswald&family=Playfair+Display&family=Rozha+One&display=swap" rel="stylesheet">
-    <pal><p></p><p></p><p></p><p></p><p class="pp"></p><p></p><p class="pp"></p><p></p><p></p><p class="pp"></p><p></p><p></p><p></p><p></p></pal>
+    <pal style="display: none"><p></p><p></p><p></p><p></p><p class="pp"></p><p></p><p class="pp"></p><p></p><p></p><p class="pp"></p><p></p><p></p><p></p><p></p></pal>
 
 
 
 
     <!-------------------- CSS STYLE IMPORT -------------------->
-    <link href="CSS/overall.css" rel="stylesheet">
-    <link href="CSS/style.css" rel="stylesheet">
-    <link href="CSS/pages.css" rel="stylesheet">
+    <link href="./CSS/overall.css" rel="stylesheet">
+    <link href="./CSS/style.css" rel="stylesheet">
+    <link href="./CSS/pages.css" rel="stylesheet">
 
     <!-------------------- SCRIPT IMPORT -------------------->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
 
-<body>
+<body id="menu_page">
     <header>
+        <a name="top"></a>
 
-        <!-------------------- VARIABLES -------------------->
-        <div id="var_def">
-            <vr value="vr1">le contenu 1</vr>
+        <div class="color_picker flexrow" style="display: none;">
+            <input type="color" id="inputColorPicker" value="#e0d1d1">
+            <div class="table_js"><label for="inputColorPicker" id="labelColorPicker">#e0d1d1</label></div>
         </div>
 
-        <nav></nav>
     </header>
 
-    <main id="var_container">
-        <h1>Your Title</h1>
+    <main>
+        <h1>Portfolio graphique</h1>
+        <st class="block">Emily-Yu Sayez (@poesiescendrees)</st>
+        <nav>
+            <ul class="nobullet">
+            <li><a href="./menu.html" class="selected">menu</a></li>
+                <li><a href="./PAGES/creations.html">divers</a></li>
+                <li><a href="./PAGES/dessins.html">dessins</a></li>
+                <li><a href="./PAGES/webdesign.html">webdesign</a></li>
+            </ul>
+        </nav>
 
-        <vr value="vr1"></vr>
+        <section id="main">
+            <qt>
+                <h3><a name="intro" class="nostyle">le portfolio</a></h3>
+                Ce portfolio regroupe les différents travaux personnels présentés dans le cadre de mon épreuve d'admission à l'Institut des Arts de Diffusion. Ces créations peuvent être retrouvées dans les différentes pages du site et sont regroupées par catégories : <a href="./PAGES/creations.html">créations graphiques en tous genres</a>, <a href="./PAGES/dessins.html">dessins graphiques</a> et <a href="./PAGES/webdesign.html">webdesign</a>. Pour cette derière catégorie, des captures d'écran de différentes pages de design sont affichées ainsi que les adresses URL correspondantes.
+            </qt>
+            <qt>
+                <h3><a name="disclaimer" class="nostyle">à propos de moi</a></h3>
+                uc.
+            </qt>
+            <qt>
+                <h3><a name="technique" class="nostyle">logiciels et ressources</a></h3>
+                Les créations graphiques présentées sont toutes majoritairement réalisées sur Photoshop et Photofiltre. Les dessins ont été tracés à la tablette graphique.<br><br>
+
+                Pour ce qui est des designs Internet, tant celui de ce portfolio que ceux montrés dans la catégorie correspondante; du HTML, du CSS et du Javascript ont été utilisés. Github est la plateforme choisie afin d'héberger le site.
+            </qt>
+
+        </section>
     </main>
 
     <footer>
-
+        <ul class="nobullet">
+            <li><a href="#top">[ aller en haut ]</a></li>
+            <li><a href="#bottom">[ aller en bas ]</a></li>
+        </ul>
     </footer>
 
 
 
     <!-------------------- SCRIPT IMPORT -------------------->
-    <script src="JS/toggle_package.js"></script>
-    <script src="JS/overall.js"></script>
+    <script src="./JS/toggle_package.js"></script>
+    <script src="./JS/overall.js"></script>
+    <script src="./JS/color.js"></script>
+
+    <a name="bottom"></a>
 </body>
 </html>
