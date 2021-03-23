@@ -1,12 +1,19 @@
 $(setBasicClasses());
+$(setChangeVariables());
 
 $(setAddBefore());
 $(setVariables('vr'));
+
+
+
 
 function setBasicClasses() {
     $('.table_js').wrapInner('<table><tr><td></table></tr></td>');
     $('.scroll_js').wrapInner('<scroll></scroll>');
 }
+
+
+
 
 /*
     <container class="addBefore" target="elem" toAdd="<span>—</span>">
@@ -55,7 +62,7 @@ function setAddBefore() {
         console.log(useCount);
         var target = ths.attr('target');
         var toAdd = ths.attr('toAdd');
-        toAdd = '<span>' + toAdd + '</span>';
+        toAdd = createHTML('span', toAdd);
 
         ths.find(target).each(function() {
             console.log(count);
@@ -64,6 +71,71 @@ function setAddBefore() {
         });
     });
 }
+
+
+
+
+/*
+    <container class="changeVariables" style="--variableX: valueX; --variableY">
+        some long content...
+        some long content
+    </container>
+
+    EFFECT :: CHANGE VARIABLES
+        for the length of the block, variables are changed.
+        the values can mostly be colors.
+        that way, body background can be changed easily for just a part of the code.
+
+        example:
+            <div class="changeVariables" style="--background-body: white; --h1: lightblue;">
+                <img src="xx" height="3000">
+            </div>
+            --> body background and highlight 1 will be changed for the 3000px height of the div.changeVariables
+*/
+function setChangeVariables() {
+
+    $('.changeVariables').each(function() {
+        // sets top and bottom of element
+        var el = $(this);
+        var pos = el.offset();
+        var top = pos.top - $('nav').outerHeight();
+        if (top < 0) top = 0;
+        var bottom = top + el.outerHeight()- $('nav').outerHeight();
+
+
+        // sets list of css attributes tu change
+        var style = el.attr('style').split(';');
+        var styles = [];
+        var current = '';
+
+        for (let cssAttr of style) {
+            cssAttr = strip(cssAttr);
+            if (cssAttr != '') {
+                current = cssAttr.split(':');
+                for (var i = 0; i < current.length; i++)
+                current[i] = strip(current[i]);
+                styles.push(current);
+            }
+        }
+
+        // change the attributes on scroll
+        $(window).scroll(function() {
+            var scroll = $(this).scrollTop();
+            if (top < scroll && scroll < bottom) {
+                for (let att of styles) {
+                    $('body').css(att[0], att[1]);
+                }
+            } else {
+                for (let att of styles) {
+                    $('body').removeAttr('style');
+                }
+            }
+        });
+    });
+}
+
+
+
 
 /*
     SET :: ($('#var_def') NOT child of $('#var_container'))

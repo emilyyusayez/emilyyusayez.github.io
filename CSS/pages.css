@@ -56,6 +56,18 @@ nav {
     text-align: center;
 }
 
+nav ul.toggled {
+    --display: inline-block;
+    width: auto;
+    background: var(--d2);
+    padding: 0 0 var(--mo);
+    border-radius: 2px;
+}
+
+nav ul.toggled a:not(.selected) {
+    --color: var(--background-body);
+}
+
 #pages_nav {
     width: calc(100% + 2 * var(--padding-body));
     margin-left: calc(-1 * var(--padding-body));
@@ -68,7 +80,7 @@ nav li, footer li, ul.big li {
 
 nav a, a.big, ul.big a {
     padding: 0 var(--mo) var(--sm);
-    border-bottom: 4px solid;
+    border-bottom: 4px solid !important;
 }
 
 nav a, footer a, a.big, ul.big a {
@@ -118,8 +130,18 @@ footer a {
 }
 
 .folio.avatar {
-    --max: 250px;
+    --max: 350px;
     grid-gap: var(--medium-padding-body);
+}
+
+.column.avatar {
+    margin: var(--column-gap) 0;
+    column-gap: var(--column-gap);
+    --column-gap: var(--gi);
+}
+
+.column.avatar > * p {
+    margin-bottom: var(--mo);
 }
 
 
@@ -201,6 +223,7 @@ footer a {
     --width-aside-closeup: 30%;
     height: var(--height-aside-closeup);
     --height-aside-closeup: 30%;
+    --background-hover: rgba(20, 20, 20, .8);
     padding: var(--sm);
     position: absolute;
     cursor: auto;
@@ -209,7 +232,11 @@ footer a {
 
     color: var(--main-color);
     text-align: left;
+}
 
+.closeup aside.dark {
+    --background-hover: rgba(255, 255, 255, .8);
+    color: var(--d1);
 }
 
 .closeup aside * {
@@ -219,7 +246,7 @@ footer a {
 }
 
 .closeup aside:hover {
-    background: rgba(20, 20, 20, .8);
+    background: var(--background-hover);
 }
 
 
@@ -228,12 +255,17 @@ footer a {
 
 /*- - - - - JS RELATED*/
 
+.closeup {
+    --bck: var(--background-body);
+}
+
 .closeup .cover {
     width: 100vw;
     height: 100vh;
-    background: var(--background-body);
+    background: var(--bck);
     padding: var(--mo);
     cursor: auto;
+    overflow: auto;
 
     position: fixed;
     z-index: 15000;

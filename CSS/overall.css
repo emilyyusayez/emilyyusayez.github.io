@@ -108,7 +108,7 @@ table{
 }
 
 .column > *:not(:last-child) {
-    margin-bottom: var(--column-gap) !important;
+    margin: 0 0 var(--column-gap) !important;
 }
 
 k{
