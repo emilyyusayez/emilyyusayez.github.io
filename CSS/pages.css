@@ -183,7 +183,7 @@ footer a {
     content: '';
     width: var(--width-slider);
     height: 100vh;
-    background: url(../img/DANSEMACABRE/1.png) 50% 50% / cover;
+    background: url(../img/MAIN/1.png) 50% 50% / cover;
     position: fixed;
     z-index: -100;
     top: 0;
