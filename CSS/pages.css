@@ -68,6 +68,10 @@ nav ul.toggled a:not(.selected) {
     --color: var(--background-body);
 }
 
+.toggled_uls .whileloading {
+    opacity: 0;
+}
+
 #pages_nav {
     width: calc(100% + 2 * var(--padding-body));
     margin-left: calc(-1 * var(--padding-body));

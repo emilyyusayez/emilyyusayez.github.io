@@ -38,19 +38,26 @@
         <st class="block">Emily-Yu Sayez (@poesiescendrees)</st>
 
         <nav id="pages_nav">
-            <ul class="nobullet">
+            <ul class="nobullet toggle_inside" toggling=".toggled_uls" children=".toggling">
             <li><a href="../index.html">menu</a></li>
-                <li><a class="toggle" target=".divers.toggled">graphisme</a></li>
+                <li><a class="toggling">graphisme</a></li>
                 <li><a href="#top" class="selected">dessins</a></li>
-                <li><a href="./webdesign.html">webdesign</a></li>
+                <li><a class="toggling">webdesign</a></li>
             </ul>
 
-            <ul class="hidden divers toggled">
-                <li><a href="./divers/graphtober.html">graphtober</a></li>
-                <li><a href="./divers/posters.html">posters</a></li>
-                <li><a href="./divers/avatars.html">avatars</a></li>
-                    <li><a href="./divers/technique.html">technique</a></li>
-            </ul>
+            <div class="toggled_uls">
+                <ul class="whileloading divers toggled">
+                    <li><a href="./graphisme/graphtober.html">graphtober</a></li>
+                    <li><a href="./graphisme/posters.html">posters</a></li>
+                    <li><a href="./graphisme/posters.html">avatars</a></li>
+                    <li><a href="./graphisme/technique.html">technique</a></li>
+                </ul>
+                <ul class="toggled divers whileloading">
+                    <li><a href="./webdesign/forums.html">forums</a></li>
+                    <li><a href="./webdesign/forums.html">pages tumblr</a></li>
+                    <li><a href="./webdesign/forums.html">projets universitaires</a></li>
+                </ul>
+            </div>
         </nav>
 
 
@@ -109,6 +116,7 @@
     <script src="../JS/overall.js"></script>
     <script src="../JS/color.js"></script>
     <script src="../JS/images.js"></script>
+    <script src="../JS/nav_uls.js"></script>
 
     <a name="bottom"></a>
 </body>

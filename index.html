@@ -28,25 +28,32 @@
         <h1>Portfolio graphique</h1>
         <st class="block">Emily-Yu Sayez (@poesiescendrees)</st>
         <nav>
-            <ul class="nobullet">
+            <ul class="nobullet toggle_inside" toggling=".toggled_uls" children=".toggling">
             <li><a href="#top" class="selected">menu</a></li>
-                <li><a class="toggle" target=".divers.toggled">graphisme</a></li>
+                <li><a class="toggling">graphisme</a></li>
                 <li><a href="./PAGES/dessins.html">dessins</a></li>
-                <li><a href="./PAGES/webdesign.html">webdesign</a></li>
+                <li><a class="toggling">webdesign</a></li>
             </ul>
 
-            <ul class="hidden divers toggled">
-                <li><a href="./PAGES/divers/graphtober.html">graphtober</a></li>
-                <li><a href="./PAGES/divers/posters.html">posters</a></li>
-                <li><a href="./PAGES/divers/avatars.html">avatars</a></li>
-                    <li><a href="./PAGES/divers/technique.html">technique</a></li>
-            </ul>
+            <div class="toggled_uls">
+                <ul class="whileloading divers toggled">
+                    <li><a href="./PAGES/graphtober.html">graphtober</a></li>
+                    <li><a href="./PAGES/graphisme/posters.html">posters</a></li>
+                    <li><a href="./PAGES/graphisme/avatars.html">avatars</a></li>
+                    <li><a href="./PAGES/graphisme/technique.html">technique</a></li>
+                </ul>
+                <ul class="toggled divers whileloading">
+                    <li><a href="./PAGES/webdesign/forums.html">forums</a></li>
+                    <li><a href="./PAGES/webdesign/forums.html">pages tumblr</a></li>
+                    <li><a href="./PAGES/webdesign/forums.html">projets universitaires</a></li>
+                </ul>
+            </div>
         </nav>
 
         <section id="main">
             <qt>
                 <h3><a name="intro" class="nostyle">le portfolio</a></h3>
-                Ce portfolio regroupe les différents travaux personnels présentés dans le cadre de mon épreuve d'admission à l'Institut des Arts de Diffusion. Ces créations peuvent être retrouvées dans les différentes pages du site et sont regroupées par catégories : <a href="./PAGES/creations.html">créations graphiques en tous genres</a>, <a href="./PAGES/dessins.html">dessins graphiques</a> et <a href="./PAGES/webdesign.html">webdesign</a>. Pour cette derière catégorie, des captures d'écran de différentes pages de design sont affichées ainsi que les adresses URL correspondantes.
+                Ce portfolio regroupe les différents travaux personnels présentés dans le cadre de mon épreuve d'admission à l'Institut des Arts de Diffusion. Ces créations peuvent être retrouvées dans les différentes pages du site et sont regroupées par catégories : créations graphiques en tous genres, dessins graphiques et webdesign. Pour cette derière catégorie, des captures d'écran de différentes pages de design sont affichées ainsi que les adresses URL correspondantes.
             </qt>
             <qt>
                 <h3><a name="disclaimer" class="nostyle">à propos de moi</a></h3>
@@ -75,6 +82,7 @@
     <script src="./JS/toggle_package.js"></script>
     <script src="./JS/overall.js"></script>
     <script src="./JS/color.js"></script>
+    <script src="./JS/nav_uls.js"></script>
 
     <a name="bottom"></a>
 
