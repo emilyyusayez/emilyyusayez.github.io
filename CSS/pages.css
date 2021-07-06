@@ -204,8 +204,8 @@ footer a {
 
 /*- - - - - COLUMNS FIX - - - - -*/
 
-#TUMBLR .column, #UNIVERSITY .column, #FORUMS .column {
-    padding-bottom: 250px;
+.column.avatar, .headers-column {
+    padding-bottom: 200px;
 }
 
 
@@ -314,5 +314,24 @@ footer a {
     body {
         --padding-body: 80px;
         --medium-padding-body: 50px;
+    }
+
+    .column.avatar {
+        --column-gap: var(--bg);
+    }
+
+    .column.avatar, .headers-column {
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .column.headers-column {
+        column-count: 1;
+        --column-gap: var(--bg);
+    }
+
+    .column.three {
+        column-count: 2;
     }
 }

@@ -108,6 +108,7 @@ table{
 }
 
 .column > *:not(:last-child) {
+    display: block;
     margin: 0 0 var(--column-gap) !important;
 }
 
