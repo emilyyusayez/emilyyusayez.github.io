@@ -202,7 +202,11 @@ footer a {
 
 
 
-/*- - - - - CREATIONS PAGE - - - - -*/
+/*- - - - - COLUMNS FIX - - - - -*/
+
+#TUMBLR .column, #UNIVERSITY .column, #FORUMS .column {
+    padding-bottom: 250px;
+}
 
 
 
