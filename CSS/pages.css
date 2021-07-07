@@ -133,11 +133,6 @@ footer a {
     margin-top: var(--padding-body);
 }
 
-.folio.avatar {
-    --max: 350px;
-    grid-gap: var(--medium-padding-body);
-}
-
 .column.avatar {
     margin: var(--column-gap) 0;
     column-gap: var(--column-gap);
@@ -326,6 +321,14 @@ footer a {
 }
 
 @media only screen and (max-width: 800px) {
+    body {
+        --padding-body: 50px;
+    }
+
+    #menu_page {
+        --width-slider: 0;
+    }
+
     .column.headers-column {
         column-count: 1;
         --column-gap: var(--bg);
@@ -333,5 +336,12 @@ footer a {
 
     .column.three {
         column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .column.three {
+        column-count: 1;
     }
 }
