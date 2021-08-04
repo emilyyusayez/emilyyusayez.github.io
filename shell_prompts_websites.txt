@@ -1,0 +1,14 @@
+À LANCER AVANT DANS DEUX CONSOLES DE COMMANDES DIFFÉRENTES :
+
+
+    ########## POUR SITE SINF12BA ##########
+        $ cd C:\Users\emily\github\LINFO1212\Projet final\
+        $ node server.js
+        -> se connecter avec un compte
+
+
+    ########## POUR SITE SINF11BA ##########
+        $ cd C:\Users\emily\Documents\0_UCL\1 - OLD\SINF11BA\Q2\P2_2\P2_FINAL\projet\flaskr
+        $ venv\Scripts\activate
+        $ cd ../
+        $ python3 ./setup.py

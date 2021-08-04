@@ -225,8 +225,9 @@ footer a {
     width: var(--width-aside-closeup);
     --width-aside-closeup: 30%;
     height: var(--height-aside-closeup);
-    --height-aside-closeup: 30%;
+    --height-aside-closeup: 40%;
     --background-hover: rgba(20, 20, 20, .8);
+    background: var(--background-hover);
     padding: var(--sm);
     position: absolute;
     cursor: auto;
@@ -248,9 +249,9 @@ footer a {
     --scale: 0.8;
 }
 
-.closeup aside:hover {
+/*.closeup aside:hover {
     background: var(--background-hover);
-}
+}*/
 
 
 
