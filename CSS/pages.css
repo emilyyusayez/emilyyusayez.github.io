@@ -46,7 +46,7 @@ nav {
     max-height: 30vh;
     background: var(--background-body);
     margin: var(--bg) 0;
-    padding: var(--bg);
+    padding: var(--mo) var(--bg) var(--bg);
     overflow: auto;
     position: sticky;
     z-index: 1000;
@@ -101,7 +101,7 @@ nav a.selected, footer a.selected, a.big.selected, ul.big a.selected {
 footer {
     width: 100%;
     background:var(--background-body);
-    padding: var(--mo) var(--bg);
+    padding: var(--sm) var(--bg);
     position: fixed;
     bottom: 0;
     left: 0;
