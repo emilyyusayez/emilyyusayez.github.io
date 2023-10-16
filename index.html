@@ -1,89 +1,782 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESAYEZ PORTFOLIO</title>
 
-    <title>PORTFOLIO</title>
-    <link rel="icon" href="./img/MAIN/2.png">
-    <meta content="text/html;charset=UTF-8" http-equiv="Content-type" />
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@200&family=Oswald&family=Playfair+Display&family=Rozha+One&display=swap" rel="stylesheet">
-
-
-
-
-    <!-------------------- CSS STYLE IMPORT -------------------->
-    <link href="./CSS/overall.css" rel="stylesheet">
-    <link href="./CSS/style.css" rel="stylesheet">
-    <link href="./CSS/pages.css" rel="stylesheet">
-
-    <!-------------------- SCRIPT IMPORT -------------------->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./JS/header.js"></script>
-
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/head.js" defer></script>
+    <script src="./js/widgets.js" defer></script>
+    <script src="./js/theme.js" defer></script>
 </head>
+<body>
+    <header>
+        <article class="header">
+            <div class="header__layout header-layout">
+                <div class="header-layout__upperline">
+                    <span class="middle-title middle-title--color thin">
+                        <span class="header-layout__name">
+                            Emily-Yu Sayez
+                        </span>
+                        <span class="header-layout__date">
+                            2021 - 2023
+                        </span>
+                    </span>
+                </div>
 
-<body id="menu_page">
+                <div class="header-layout__title">
+                    <h1>
+                        <span class="display-inline-block">PORT</span><span class="display-inline-block">FOLIO</span>
+                    </h1>
+                </div>
+
+                <div class="header-layout__underline">
+                    <span class="middle-title middle-title--color">
+                        Student in Multimedia Production at Institut des Arts de Diffusion, showing 2D animation & motion design, 3D sculpting, graphism & webdesign
+                    </span>
+                </div>
+            </div>
+        </article>
+    </header>
+
+    <article class="mainnav mainnav--sticky">
+        <div class="mainnav__layout justify-start align-center mainnav-layout">
+            <div class="mainnav-layout__theme no-extend">
+                <button class="unset js-theme">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve" class="mainnav-layout__img theme-svg">
+               <g>
+                   <path class="theme-svg__fill" d="M4.5,9.8C3.1,9.8,1.7,9.1,0.8,8C1.4,8.2,2,8.3,2.6,8.3c3.1,0,5.6-2.5,5.6-5.6c0-0.7-0.1-1.3-0.3-2
+                       c1.1,1,1.8,2.4,1.8,3.9C9.7,7.5,7.4,9.8,4.5,9.8z"/>
+                   <path class="theme-svg__stroke" d="M8.3,1.6C9,2.4,9.4,3.5,9.4,4.7c0,2.7-2.2,4.9-4.9,4.9c-1.1,0-2.1-0.4-2.9-1.1c0.3,0.1,0.6,0.1,0.9,0.1
+                       c3.2,0,5.9-2.6,5.9-5.9C8.4,2.3,8.4,1.9,8.3,1.6 M7.2,0c0.5,0.8,0.7,1.7,0.7,2.7C7.9,5.6,5.6,8,2.6,8C1.7,8,0.8,7.8,0,7.3
+                       C0.9,8.8,2.6,10,4.5,10c2.9,0,5.4-2.3,5.4-5.4C9.9,2.7,8.9,0.9,7.2,0L7.2,0z"/>
+               </g>
+               </svg>
+                </button>
+            </div>
+
+            <!-- <div class="mainnav-layout__title no-extend">
+                <span class="middle-title dark bold letter-spacing uppercase">portfolio</span>
+            </div> -->
+
+            <nav class="mainnav-layout__nav no-extend">
+                <ul class="mainnav-layout__navlist unset justify-start">
+                    <li>
+                        <a href="#top"><span class="middle-title thin trans"><b>home</b></span></a>
+                    </li>
+                    <li>
+                        <a href="#projects"><span class="middle-title thin trans">projects</span></a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1g086_FI6IPaluzM46F7gEDXBMF8pM0ec/view?usp=sharing"><span class="middle-title thin trans">resume</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </article>
 
     <main>
-        <h1>Portfolio graphique</h1>
-        <st class="block">Emily-Yu Sayez (@poesiescendrees)</st>
-        <nav>
-            <ul class="nobullet toggle_inside" toggling=".toggled_uls" children=".toggling">
-            <li><a href="#top" class="selected">menu</a></li>
-                <li><a class="toggling">graphisme&nbsp;▼</a></li>
-                <li><a href="./PAGES/dessins.html">dessins</a></li>
-                <li><a class="toggling">webdesign&nbsp;▼</a></li>
-            </ul>
+        <div class="section">
+            <div class="container container--fullwidth">
+                <article class="about smallsection background smallsection--inner" id="aboutme">
+                    <div class="about__intro intro-about smallsection">
+                        <div class="intro-about__part intro-about__part1">
+                            <span class="intro-about__big">
+                                <h2 class="uppercase dark nomargin">
+                                    Emily-Yu Sayez
+                                </h2>
+                            </span>
+                            <span class="intro-about__small">
+                                <span class="light-title">
+                                    Multimedia Production
+                                </span>
+                            </span>
+                        </div>
+                        <div class="intro-about__part intro-about__part2">
+                            <span class="intro-about__big">
+                                <h2 class="uppercase dark nomargin">
+                                    2021 - 2023
+                                </h2>
+                            </span>
+                            <span class="intro-about__small">
+                                <span class="light-title">
+                                    Institut des Arts de Diffusion
+                                </span>
+                            </span>
+                        </div>
 
-            <div class="toggled_uls">
-                <ul class="whileloading divers toggled">
-                    <li><a href="./PAGES/graphisme/graphtober.html">graphtober</a></li>
-                    <li><a href="./PAGES/graphisme/posters.html">posters</a></li>
-                    <li><a href="./PAGES/graphisme/avatars.html">avatars</a></li>
-                    <li><a href="./PAGES/graphisme/technique.html">technique</a></li>
-                </ul>
-                <ul class="toggled divers whileloading">
-                    <li><a href="./PAGES/webdesign/forums.html">forums</a></li>
-                    <li><a href="./PAGES/webdesign/tumblr.html">pages tumblr</a></li>
-                    <li><a href="./PAGES/webdesign/university.html">projets universitaires</a></li>
-                </ul>
+                    </div>
+
+
+                    <div class="about__main main-about smallsection smallsection--small">
+                        <div class="main-about__photo">
+                            <img src="./assets/img/self/self_V7.png" alt="">
+                        </div>
+
+                        <div class="main-about__infos">
+                            <div class="no-extend main-about__title">
+                                <h2 class="uppercase big underline">
+                                    <span>About me</span>
+                                </h2>
+                            </div>
+
+                            <div class="main-about__text quote--big">
+                                <!-- I am a third year student in Multimedia Production Bachelor's degree at Institut des Arts de Diffusion (IAD). As a digital entertainment enthusiast, I enjoy learning new technical skills to support creative experiences in various domains such as animation and web design.
+                                
+                                I am currently seeking opportunities for internships in the fields of game design and interactive development, with the goal of applying my knowledge and gaining valuable experience while contributing to the creative process.-->
+                                
+                                <p>I am a third year student in Multimedia Production Bachelor's degree at Institut des Arts de Diffusion (IAD). I enjoy exploring various art domains by combining technical skills with creative experiences.</p> <br>
+                                
+                                <p>I am currently seeking opportunities for internships in game design and interactive development, with the goal of gaining valuable experience while contributing to the creative process.</p>
+                            </div>
+                        </div>
+
+                        <div class="about__media media-about smallsection smallsection--small">
+                            <ul class="media-about__list unset">
+                                <li>
+                                    <a href="mailto:emilyyusayez@gmail.com" class="unset">
+                                        <span class="media-about__item special-link">
+                                            <span class="middle-title dark dark uppercase letter-spacing--small">mail address</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/emily-yu-sayez-7568b1295/" class="unset">
+                                        <span class="media-about__item special-link special-link--highlight2">
+                                            <span class="middle-title dark dark uppercase letter-spacing--small">linkedin</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#top" class="unset">
+                                        <span class="media-about__item special-link">
+                                            <span class="middle-title dark dark uppercase letter-spacing--small">resume</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </nav>
+        </div>
 
-        <section id="main">
-            <qt>
-                <h3><a name="disclaimer" class="nostyle">Le portfolio</a></h3>
-                Ce portfolio regroupe les différents travaux personnels présentés dans le cadre de mon épreuve d'admission à l'Institut des Arts de Diffusion, formation Multimédia. Les différentes pages du site regroupent ces créations par catégories : <c>créations graphiques en tous genres</c>, <c>dessins graphiques</c> et <c>webdesign</c>.
-            </qt>
-            <qt>
-                <h3><a name="infos" class="nostyle">À propos de moi</a></h3>
-                Mon nom est Emily-Yu Sayez et je suis candidate aux épreuves d'admission de l'Institut des Arts de Diffusion pour la formation Multimédia. Actuellement dans ma deuxième année d'étude à l'UCLouvain en sciences informatiques, je souhaite rediriger mon cursus vers des activités plus créatives et centrées sur des projets de productions visuelles.
-            </qt>
-            <qt>
-                <h3><a name="technique" class="nostyle">Logiciels et ressources</a></h3>
-                Les créations graphiques présentées sont toutes majoritairement réalisées sur Photoshop et Photofiltre. Les dessins ont été tracés à la tablette graphique.<br><br>
 
-                Pour ce qui est des designs Internet, du HTML, du CSS et du Javascript ont été utilisés. Certains utilisent du Python dans leur développement. Le design du portfolio a été réalisé spécifiquement pour l'épreuve d'admission. Github est la plateforme choisie afin d'héberger le site.
-            </qt>
+        <div class="section">
+            <div class="container">
+                <article class="fields smallsection smallsection--inner">
+                    <div class="fields__main main-fields smallsection smallsection--small">
+                        <div class="main-fields__quote">
+                            <div class="quote">
+                                <!-- To gain access to game development project activities, I am eager to specialize my skills in 3D animation and interactive development while remaining highly motivated to learn other essential areas required in the industry. -->
+                                I am eager to specialize skills developped through academic and personal projects while remaining highly motivated to learn other essential industry-specific areas.
+                            </div>
+                        </div>
 
-        </section>
+                        <ul class="main-fields__list unset alternate ">
+                            <li>
+                                <span class="middle-title thin italic">
+                                    3D Modeling
+                                </span>
+                            </li>
+                            <li>
+                                <span class="middle-title thin italic">
+                                    2D traditional animation
+                                </span>
+                            </li>
+                            <li>
+                                <span class="middle-title thin italic">
+                                    Graphism
+                                </span>
+                            </li>
+                            <li>
+                                <span class="middle-title thin italic">
+                                    Webdesign
+                                </span>
+                            </li>
+                            <li>
+                                <span class="middle-title thin italic">
+                                    Interactive Development
+                                </span>
+                            </li>
+                            <li>
+                                <span class="middle-title thin italic">
+                                    Montage & compositing
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="container">
+                <article class="options smallsection smallsection--inner">
+                    <div class="options__title liner">
+                        <h2 class="uppercase big underline no-extend">
+                            <span>Recent projects</span>
+                        </h2>
+                    </div>
+
+                    <div class="options__filter filter-options">
+                        <div class="filter-options__title small-title">
+                            Filter them by type
+                        </div>
+
+                        <!-- <div class="filter-options__options quote--menu quote small bigline">
+                            <ul class="unset">
+                                <li>
+                                    <button class="unset js-deselect-all">reset</button>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+
+                    <div class="options__filterl filterl-options">
+                        <ul class="unset filterl-options__list js-optiong js-optiong--checkbox js-filterg">
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="graphism">
+                                    <span>graphism</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="webdesign">
+                                    <span>webdesign</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="compositing">
+                                    <span>Montage & compositing</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="animation">
+                                    <span>2D traditional animation</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="three-d">
+                                    <span>3D modeling</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset filterl-options__button js-option js-filter" data-type="io">
+                                    <span>interactive development</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="options__sort sort-options">
+                        <div class="filter-options__title small-title">
+                            sort by
+                        </div>
+                    </div>
+
+                    <div class="options__sortl sortl-options quote small">
+                        <ul class="unset sortl-options__list js-optiong js-optiong--radio js-sortg">
+                            <li>
+                                <button class="unset sortl-options__button js-option js-sort default" data-type="date-reverse">
+                                    <span>date of creation (most recent first)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset sortl-options__button js-option js-sort" data-type="date">
+                                    <span>date of creation (least recent first)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset sortl-options__button js-option js-sort" data-type="alpha">
+                                    <span>alphabetical order (A - B)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset sortl-options__button js-option js-sort" data-type="alpha-reverse">
+                                    <span>alphabetical order (Z - A)</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="unset sortl-options__button js-option js-sort" data-type="type">
+                                    <span>type</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+
+
+
+
+
+
+                <article class="projects smallsection" id="projectsss">
+                    <a id="projects"></a>
+
+                    <ul class="unset projects__list" id="js-container">
+                        <li class="js-filter-article" data-filters="three-d" data-name="grandmas attic" data-date="2303">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/3D__attic/dawn_V4.jpg" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Grandma's attic</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        March 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>3D modeling</b> of a room using Maya Software focusing on modeling, lighting and texturing aspects.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/grandmas-atic.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        
+                        <li class="js-filter-article" data-filters="three-d" data-name="grey haired girl" data-date="2303">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/3D__character/character_V3.jpg" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Grey haired girl</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        March 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>3D modeling</b> of a non-rigged character using Maya Software, focusing on the human modeling and texturing aspects.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/grey-haired-girl.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="three-d" data-name="simple office" data-date="2301">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/3D__office/day_V6.jpg" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Simple office</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        january 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>3D modeling</b> of a room using Maya Software focusing on the modeling, lighting and texturing aspects.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/simple-office.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism animation compositing" data-name="angest" data-date="2304">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/animation__angst/room_intro.jpg" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">ANGEST</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        April 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>2D animation</b> using multiple softwares and techniques, depicting intense and abstract scenes.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/angest.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism animation compositing" data-name="into the ocean" data-date="2206">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/animation__undertheocean/essai_V5.jpg" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">INTO THE OCEAN</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        June 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>3D animation</b> using mostly Adobe Photoshop and After Effects, depicting an imaginary trip under the ocean.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/into-the-ocean.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="compositing io" data-name="the enclave" data-date="2205">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/di__enclave/screen.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">The Enclave</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        May 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        Simple <b>3D game</b> scripted with Unreal Engine 4 using open-source assets.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/the-enclave.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="compositing io" data-name="sakura" data-date="2304">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/di_sakura/screen4.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Sakura</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        April 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>3D cinematic</b> using the Unreal Engine 4 cameras and cinematic effects, using open-source assets.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/sakura.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="the outlander" data-date="2211">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__gameart/styleframe final version.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">The Outlander</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        Novembre 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>Character design</b> and game art using Adobe Photoshop with a consistent visual identity.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/the-outlander.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="fairies river" data-date="2112">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__mattepainting/mattepainting.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Fairies River</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        December 2021
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>Mattepainting</b> of a fantastic and magical scene created on Adobe Photoshop using open-source images.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/fairy-river.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="the mckean experiment" data-date="2110">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__mckean/mckean.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">The McKean experiment</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        Octobre 2021
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>Graphic design</b> imitating the style of visual artist McKean created on Adobe Photoshop.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/the-mckean-experiment.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="neon space" data-date="2210">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__neon/version 2 complète.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">NEON SPACE</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        October 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>Character design</b> experimenting on a specific graphic style created on Adobe Photoshop.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/neon-space.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="red burn" data-date="2211">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__strangerthings/version finale.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Red Burn</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        November 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        Fanart <b>poster</b> of the Stranger Things serie designed on Adobe Fresco.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/red-burn.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="zendaya" data-date="2111">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/graphism__zendaya/zendaya.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Zendaya</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        November 2021
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        <b>2D graphic design</b> utilizing vector techniques on Adobe Illustrator.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/zendaya.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="graphism" data-name="red phoenix" data-date="2302">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/self__phoenix/V2.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Red Phoenix</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        February 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        Personal graphic project <b>poster</b> designed on Adobe Photoshop.
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/red-phoenix.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="webdesign" data-name="angelscape creations" data-date="2302">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/web__angelscape/V1.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Angelscape creations</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        February 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        UI (& UX) design of a static <b>website</b> (portfolio for a digital artist).
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/angelscape-creations.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="webdesign" data-name="tales of the city" data-date="2212">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/web__talesofthecity/V1.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Tales of The City</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        December 2022
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        UI (& UX) design of a static <b>website</b> (fan site for the 'Tales of the City' series).
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/tales-of-the-city.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <!-- <li class="js-filter-article" data-filters="webdesign" data-name="black roses" data-date="2307">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/web__unfinished/BR3.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Black Roses</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        July 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        Prototypes UI (& UX) design of a static website (forum).
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/black-roses.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+
+                        <li class="js-filter-article" data-filters="webdesign" data-name="monde emerge" data-date="2305">
+                            <article class="projects__article article-projects">
+                                <img src="./assets/img/projects/web__unfinished/ME4.png" alt="" class="article-projects__image">
+                            
+                                <div class="article-projects__presentation presentation-projects">
+                                    <div class="presentation-projects__name">
+                                        <span class="small-title small-title--underline">Monde Emergé</span>
+                                    </div>
+                                    <div class="presentation-projects__date italic">
+                                        June 2023
+                                    </div>
+                                    <div class="presentation-projects__text">
+                                        Prototypes UI (& UX) design of a static website (forum).
+                                    </div>
+                                    <div class="presentation-projects__link small-title">
+                                        <a href="./pages/monde-emerge.html">more here</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li> -->
+
+
+
+                    </ul>
+
+                    
+                </article>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <ul class="nobullet">
-            <li><a href="#top">[ aller en haut ]</a></li>
-            <li><a href="#bottom">[ aller en bas ]</a></li>
-        </ul>
+        <div class="section section--footer">
+            <div class="container container--big">
+                <article class="footer">
+                    <div class="footer__upperdivision">
+                        <div class="footer__mail middle-title dark">
+                            <a href="mailto:emilyyusayez@gmail.com">emilyyusayez@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="footer__lowerdivision">
+                        <ul class="unset footer__links">
+                            <li>
+                                <a href="#top" class="italic">home</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="italic">projects</a>
+                            </li>
+                            <li>
+                                <a href="#cv" class="italic">online cv</a>
+                            </li>
+                            <li>
+                                <a href="#aboutme" class="italic">about me</a>
+                            </li>
+                        </ul>
+
+                        <div class="footer__text">
+                            <p class="italic small thin">
+                                Don't hesitate to contact me. I look forward to hearing from you.
+                            </p>
+                        </div>
+
+                        <ul class="unset footer__settings">
+                            <li>
+                                <button class="light-title unset js-remove-theme">
+                                    Reset preferences (theme)
+                                </button>
+                            </li>
+                            <li>
+                                <ul class="unset footer__language">
+                                    <li>
+                                        <a href="#top" class="bold">English</a>
+                                    </li>
+                                    <li>
+                                        <a href="#top">French</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
     </footer>
-
-
-
-    <!-------------------- SCRIPT IMPORT -------------------->
-    <script src="./JS/toggle_package.js"></script>
-    <script src="./JS/overall.js"></script>
-    <script src="./JS/color.js"></script>
-    <script src="./JS/nav_uls.js"></script>
-
-    <a name="bottom"></a>
-
 </body>
 </html>
