@@ -486,6 +486,30 @@ span.sq, i.sq, b.sq, s.sq {
     display: grid !important;
 }
 
+.position-relative {
+    position: relative !important;
+    border: 1px solid green;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.link-anchor, .a-anchor {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
 
 
 
@@ -664,12 +688,16 @@ h2 {
     font-family: var(--font-family-highlight);
 }
 
-.middle-title--color {
+.middle-title--color, a.middle-title--color {
     color: var(--nb5);
 }
 
 a .middle-title:hover {
     color: var(--nb6);
+}
+
+a.middle-title--color:hover {
+    color: var(--color-highlight);
 }
 
 .small-title {
@@ -1597,6 +1625,12 @@ button.light-title:hover {
     margin-top: auto;
 }
 
+.presentation-projects__link a {
+    display: block;
+    background: var(--lightgreen);
+    padding-top: var(--gap-small);
+}
+
 .presentation-projects__date, .presentation-projects__text {
     margin-top: var(--gutter);
 }
@@ -1667,15 +1701,31 @@ button.light-title:hover {
     gap: var(--gutter);
 }
 
-@media all and (max-width: 750px) {
-    .page-image__image {
-        min-height: 40vh;
-    }
-}
-
 .page-image__video {
     width: 100%;
     border-radius: var(--border-radius);
+}
+
+.page-image.vimeo {
+    aspect-ratio: 16/9;
+}
+
+.page-image.vimeo .page-image__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-image.vimeo iframe .vp-center {
+    display: block !important;
+}
+
+@media all and (max-width: 750px) {
+    .page-image__image, .page-image.vimeo {
+        min-height: 40vh;
+    }
 }
 
 
@@ -1888,6 +1938,10 @@ button.light-title:hover {
     align-items: center;
     padding-bottom: var(--gap-small);
     border-bottom: 1px solid var(--color-highlight);
+}
+
+.footer__intro {
+    font-size: 120%;
 }
 
 .footer__medias {
