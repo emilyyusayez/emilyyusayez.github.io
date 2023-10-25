@@ -1724,7 +1724,7 @@ button.light-title:hover {
 
 @media all and (max-width: 750px) {
     .page-image__image, .page-image.vimeo {
-        min-height: 40vh;
+        /* min-height: 40vh; */
     }
 }
 
@@ -1884,8 +1884,14 @@ button.light-title:hover {
 
 @media all and (max-width: 750px) {
     .page-twoparts {
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
+        display: flex;
+        flex-flow: column nowrap;
         --padd-twoparts: 0;
+    }
+
+    .page-twoparts__images .page-image__image {
+        min-height: unset;
     }
 
     .page-twoparts--title::before {
