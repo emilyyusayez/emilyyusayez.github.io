@@ -1,32 +1,33 @@
 
-html:not(.theme-dark) { 
+html:not(.theme-light) { 
     --nb0: #262530;
     --nb1: #FFFFFF;
-    --nb2: #ffffffc4;
-    --nb3: #ffffff7f;
-    --nb4: #ffffff38;
+    --nb2: #ffffff8b;
+    --nb3: #ffffff3f;
+    --nb4: #ffffff14;
 
     --color1: #353399;
     --color2: #5050D3;
     --color3: #6E60D2;
     --color4: #9592C9;
+    --color5: #d6af67;
 
     --background-body: var(--nb0);
     --color-main: var(--nb1);
 }
 
-.theme-dark {
+.theme-light {
     --nb0: #262530;
     --nb1: #FFFFFF;
-    --nb2: #262530b9;
-    --nb3: #2625308a;
-    --nb4: #2625304e;
+    --nb2: #2625308b;
+    --nb3: #2625303f;
+    --nb4: #26253014;
     
     --color1: #353399;
     --color2: #5050D3;
     --color3: #6E60D2;
     --color4: #9592C9;
-    --color5: #c1871d;
+    --color5: #eeb54a;
 
     --background-body: var(--nb1);
     --color-main: var(--nb0);
@@ -73,6 +74,7 @@ html:not(.theme-dark) {
 
     --gap-section: clamp(var(--gap5), 7vh, calc(3 * var(--gap10)));
     --gap-section-big: clamp(var(--gap6), 12vh, calc(3 * var(--gap10)));
+    --gap-section-small: clamp(var(--gap2), 1.5vh, var(--gap6));
     --gap-container: clamp(var(--gap3), 5vw, 5vw);
 
 
@@ -629,6 +631,53 @@ b {
 
 /* ----- H123456 */
 
+h1, h2, h3, h4, h5, h6 {
+    font-size: calc(var(--font-size-main) * var(--scale));
+    line-height: 1;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    padding: var(--gap) 0 var(--gutter);
+}
+
+h4, h5, h6 {
+    padding: var(--gap-small) 0 var(--gutter);
+}
+
+h1 {
+    --scale: 8;
+}
+
+h2 {
+    --scale: 5;
+    line-height: 1;
+}
+
+h3 {
+    --scale: 4;
+    line-height: 1;
+}
+
+h4 {
+    --scale: 3;
+    line-height: 1;
+}
+
+h5 {
+    --scale: 2;
+    line-height: 1;
+}
+
+h6 {
+    --scale: 1.5;
+    line-height: 1;
+}
+
+
+
+/* ----- OTHER STYLES */
+
 .thin {
     font-weight: 300;
 }
@@ -704,6 +753,27 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 
 
+/*---------- BACKGROUNDS ----------*/
+
+.background {
+    color: var(--nb1);
+    background: var(--nb4);
+}
+
+.background--highlight {
+    color: var(--nb1);
+    background: var(--color-highlight);
+}
+
+.background--highlight2 {
+    color: var(--nb1);
+    background: var(--color-highlight2);
+}
+
+
+
+
+
 /*---------- SECTIONS ----------*/
 
 .section {
@@ -712,8 +782,40 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     position: relative;
 }
 
+.section--small {
+    padding: var(--gap-section-small) 0;
+}
+
 .section--big {
     padding-top: var(--gap-section-big);
+}
+
+
+
+
+
+/*---------- SMALLSECTIONS ----------*/
+
+.smallsection {
+    margin: var(--gap-small) 0 0;
+    padding: var(--gutter);
+    position: relative;
+}
+
+.smallsection--small {
+    margin: calc(1.5 * var(--gutter)) 0 0;
+}
+
+.smallsection--big {
+    margin: var(--gap) 0 0;
+}
+
+.smallsection:first-child {
+    margin-top: 0 0;
+}
+
+.smallsection > *:first-child {
+    margin-top: 0 0;
 }
 
 
@@ -747,35 +849,6 @@ a .dark:hover, a.dark:hover, .dark a:hover {
         border-radius: 0;
     }
 }
-
-
-
-
-
-/*---------- SMALL SECTIONS ----------*/
-
-.smallsection + .smallsection {
-    margin-top: var(--gap);
-}
-
-.smallsection + .smallsection.smallsection--small {
-    --gap: var(--gap-small);
-}
-
-.smallsection + .smallsection.smallsection--big {
-    --gap: var(--gap-section);
-}
-
-.smallsection--inner {
-    border-radius: var(--border-radius);
-    padding: var(--gap);
-}
-
-
-
-
-
-/*---------- BACKGROUNDS ----------*/
 
 
 

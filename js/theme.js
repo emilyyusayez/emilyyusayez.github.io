@@ -5,9 +5,11 @@
 (function () {
     const mainContainer = document.querySelector("html");
 
+
+    // first theme of the list will be the default theme
     const themes = [
-        "theme-light",
-        "theme-dark"
+        "theme-dark",
+        "theme-light"
     ];
 
     const cookName = "esayez-portfolio-theme";
