@@ -1,5 +1,8 @@
 
 html:not(.theme-light) { 
+    --nb00: #26253005;
+    --nb01: #FFFFFF05;
+
     --nb0: #262530;
     --nb1: #FFFFFF;
     --nb2: #ffffff8b;
@@ -17,8 +20,11 @@ html:not(.theme-light) {
 }
 
 .theme-light {
-    --nb0: #262530;
-    --nb1: #FFFFFF;
+    --nb00: #26253005;
+    --nb01: #FFFFFF05;
+
+    --nb0: #2d2395;
+    --nb1: #ffffff;
     --nb2: #2625308b;
     --nb3: #2625303f;
     --nb4: #26253014;
@@ -27,9 +33,9 @@ html:not(.theme-light) {
     --color2: #5050D3;
     --color3: #6E60D2;
     --color4: #9592C9;
-    --color5: #eeb54a;
+    --color5: #ffecc8;
 
-    --background-body: var(--nb1);
+    --background-body: #beb9ff;
     --color-main: var(--nb0);
 }
 
@@ -61,8 +67,8 @@ html:not(.theme-light) {
     --gap4: calc(32 / 16 * 1rem);
     --gap5: calc(48 / 16 * 1rem);
     --gap6: calc(80 / 16 * 1rem);
-    /* --gap7: calc(120 / 16 * 1rem);
-    --gap8: calc(160 / 16 * 1rem);
+    --gap7: calc(120 / 16 * 1rem);
+    /*--gap8: calc(160 / 16 * 1rem);
     --gap9: calc(200 / 16 * 1rem); */
     --gap10: calc(280 / 16 * 1rem);
 
@@ -72,7 +78,7 @@ html:not(.theme-light) {
     --gap: var(--gap6);
     --gap-small: var(--gap4);
 
-    --gap-section: clamp(var(--gap5), 7vh, calc(3 * var(--gap10)));
+    --gap-section: clamp(60px, 12vw, 300px);
     --gap-section-big: clamp(var(--gap6), 12vh, calc(3 * var(--gap10)));
     --gap-section-small: clamp(var(--gap2), 1.5vh, var(--gap6));
     --gap-container: clamp(var(--gap3), 5vw, 5vw);
@@ -81,11 +87,13 @@ html:not(.theme-light) {
     --grid-width: calc(var(--col-number) * var(--gap) + (var(--col-number) - 1) * var(--gutter));
     --gap-width-margins: calc(0.5 * (100vw - var(--grid-width)));
 
-    
-    --border-radius: var(--gap1);
+    --border-radius: var(--gap-small);
+    --border-radius-small: var(--gap2);
+    --border-radius-big: var(--gap7);
 
-    --max-width-container: 1800px;
-    --max-width2-container: 2500px;
+    --border-line-width: 2px;
+
+    --max-width-container: 2200px;
     
 
 
@@ -487,8 +495,20 @@ span.sq, i.sq, b.sq, s.sq {
     gap: var(--gutter);
 }
 
-[class*="justify-"] > *, [class*="align-"] > * {
+/*[class*="justify-"] > *, [class*="align-"] > * {
     flex: 1 1 auto;
+}*/
+
+.flex-1-1 {
+    flex: 1 1 auto;
+}
+
+.flex-grow, .flex-1-0 {
+    flex: 1 0 auto;
+}
+
+.flex-shrink, .flex-0-1 {
+    flex: 0 1 auto;
 }
 
 .gap {
@@ -632,7 +652,7 @@ b {
 /* ----- H123456 */
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: calc(var(--font-size-main) * var(--scale));
+    font-size: calc((var(--vw) + var(--font-size-main)) * var(--scale));
     line-height: 1;
     margin: 0;
 }
@@ -642,20 +662,25 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
+    --vw: 0;
     padding: var(--gap-small) 0 var(--gutter);
 }
 
 h1 {
-    --scale: 8;
+    --scale: 5;
+    --vw: 1vw;
 }
 
 h2 {
-    --scale: 5;
+    --scale: 4;
+    --vw: 0.6vw;
     line-height: 1;
+    font-weight: 900;
 }
 
 h3 {
-    --scale: 4;
+    --scale: 3;
+    --vw: 0.6vw;
     line-height: 1;
 }
 
@@ -672,6 +697,48 @@ h5 {
 h6 {
     --scale: 1.5;
     line-height: 1;
+}
+
+
+
+/* ----- OUTLINE */
+
+ .outline {
+    display: inline-flex;
+    padding: var(--gutter) var(--gap-small);
+    border: var(--border-line-width) solid var(--writing);
+    border-radius: var(--border-radius-small);
+    background: var(--nb00);
+    backdrop-filter: blur(30px);
+    position: relative;
+    z-index: 100;
+    
+    color: var(--writing);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    --writing: var(--nb1);
+    --background: var(--nb00);
+}
+
+.outline:hover {
+    --writing: var(--color5);
+}
+
+.outline--white:hover {
+    --writing: var(--nb1);
+    --background: var(--nb0);
+
+    background: var(--writing);
+    color: var(--background);
+}
+
+@media all and (max-width: 500px) {
+    .outline {
+        padding: var(--gutter);
+    }
 }
 
 
@@ -737,6 +804,11 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     background: var(--color);
 }
 
+.stroke {
+    color: transparent !important;
+    -webkit-text-stroke: 3px var(--color-main);
+}
+
 
 
 
@@ -768,6 +840,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .background--highlight2 {
     color: var(--nb1);
     background: var(--color-highlight2);
+}
+
+.theme-light .background--highlight2 {
+    color: var(--nb0);
 }
 
 
@@ -830,10 +906,6 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     margin: 0 auto;
 }
 
-.container--big {
-    max-width: var(--max-width2-container);
-}
-
 @media all and (min-width: 1600px) {
     :root {
         --gap-container: clamp(var(--gap4), 8vw, 8vw);
@@ -854,12 +926,196 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 
 
+/*---------- LINEARTICLES ----------*/
+
+.linearticle {
+    width: var(--width);
+    position: relative;
+    padding: var(--padd2) 0 var(--padd2) var(--padd);
+
+    text-align: right;
+
+    --width: 80%;
+    --padd: var(--gap);
+    --padd2: calc(0.5 * var(--padd));
+}
+
+.linearticle > * {
+    position: relative;
+    z-index: 600;
+}
+
+.linearticle::before {
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 550;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: var(--padd2);
+    border-width: 0 var(--border-line-width) var(--border-line-width) var(--border-line-width);
+    border-color: var(--nb1);
+    border-style: solid;
+    border-bottom-left-radius: var(--border-radius);
+}
+
+@media all and (min-width: 1500px) {
+    .linearticle {
+        --width: 60%;
+    }
+}
+
+
+
+
+
 
 
 
 
 
 /* ------------------------- HEADER -------------------------
+---------------------------------------------------------------------------- */
+
+.header {
+    display: grid;
+    grid-template:
+        ". .    . . .  " var(--border)
+        ". tit  . . img" auto
+        ". .    . . img" var(--border2)
+        ". name . . img" auto
+        ". .    . . sub" auto
+        / var(--border) 1fr var(--border2) var(--border2) 2fr;
+    --border: var(--border-radius-big);
+    --border2: calc(0.5 * var(--border));
+    width: clamp(200px, 100%, var(--max-width-container));
+    margin: auto;
+    position: relative;
+
+    --border-line-width: 2px;
+    --grid-area-background: 1/-3/-2/-1;
+}
+
+@media all and (max-width: 850px) {
+    .header {
+        grid-template:
+            ". . . . . ." var(--border)
+            ". tit tit tit tit ." auto
+            ". name name name name ." auto
+            ". . . . . ." var(--border2)
+            ". . . img img img" minmax(40vw, 400px)
+            ". . . sub sub ." auto
+            / var(--border2) var(--border2) var(--border2) 1fr 1fr var(--border2);
+        
+            --grid-area-background: 1/3/-2/-1;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .header {
+        grid-template:
+        ". .    ." var(--border)
+        ". tit  ." auto
+        ". name ." auto
+        ". .    ." var(--border2)
+        "img img img" minmax(50vh, 300px)
+        ". sub  ." auto
+        / var(--border2) 1fr var(--border2);
+
+        --border: var(--gap);
+        --border2: var(--gap-small);
+        --grid-area-background: 1/1/-2/-1;
+    }
+}
+
+.header > * {
+    margin: 0;
+}
+
+/* image background */
+
+.header::before, .header::after {
+    grid-area: var(--grid-area-background);
+    display: block;
+    content: '';
+    position: relative;
+    z-index: 400;
+
+    border-radius: 0 0 0 var(--border2);
+}
+
+.header::before {
+    background: url(../assets/img/background/background_middle2.png) 50% 50% / cover;
+    
+}
+
+.header::after {
+    opacity: 0;
+    transition: all var(--global-trans-time) var(--global-trans-ease);
+    background: var(--color2);
+    mix-blend-mode: hard-light;
+}
+
+.theme-light .header::after {
+    opacity: 1;
+}
+
+/* title and name */
+
+.header h1, .header h2 {
+    padding: 0;
+}
+
+.header__title {
+    grid-area: tit;
+    position: relative;
+    z-index: 500;
+}
+
+.header__name {
+    grid-area: name;
+    position: relative;
+    z-index: 500;
+}
+
+/* image */
+
+.header__image {
+    grid-area: img;
+    position: relative;
+    z-index: 500;
+    
+    background: url(../assets/img/lineart/lineart_light.png) 50% 50% / cover;
+    border-top: var(--border-line-width) solid var(--nb1);
+    border-left: var(--border-line-width) solid var(--nb1);
+}
+
+@media all and (max-width: 500px) {
+    .header::before, .header::after, .header__image {
+        border: 0;
+        border-radius: 0 0 var(--border-radius-big) 0;
+    }
+}
+
+/* sub */
+
+.header__sub {
+    grid-area: sub;
+    position: relative;
+    z-index: 500;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------- INTRO -------------------------
 ---------------------------------------------------------------------------- */
 
 
