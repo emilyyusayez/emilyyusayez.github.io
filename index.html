@@ -9,6 +9,9 @@
     <script src="./js/head.js" defer></script>
     <!-- <script src="./js/widgets.js" defer></script> -->
     <script src="./js/theme.js" defer></script>
+
+    <!-- <script src="./js/gsap_index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
 
 
         <article class="section nopadding--top">
-            <article class="header">
+            <article class="header main-block">
                 <div class="header__title">
                     <h1>
                         <span class="display-inline-block lowercase">Port</span>
@@ -37,10 +40,10 @@
                         <nav>
                             <ul class="unset flex-row justify-end row-gap--small column-gap">
                                 <li>
-                                    <a href=""><span class="outline trans">3D Artist</span></a>
+                                    <a href="#carousel-3d"><span class="outline trans">3D Artist</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><span class="outline trans outline--white">Webdesigner</span></a>
+                                    <a href="#carousel-webdesign"><span class="outline trans outline--white">Webdesigner</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -52,8 +55,247 @@
 
     <main>
         <article class="section">
-            <article class="intro">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facere? Praesentium exercitationem necessitatibus aliquam maxime? Provident porro deserunt impedit laboriosam incidunt odit minus rerum architecto, quis consequuntur mollitia culpa sunt!
+            <article class="intro main-block">
+                <div class="intro__title">
+                    <h2>
+                        Who am I ?
+                    </h2>
+                </div>
+
+                <div class="intro__subtitle">
+                    <span class="subtitle">
+                    A few words to get to know me
+                    </span>
+                </div>
+
+                <div class="intro__img"></div>
+
+                <div class="intro__stats stats-intro">
+                    <ul class="unset stats-intro__ul">
+                        <li>
+                            <outline class="display-block outline flex-row justify-between column-gap--small align-center">
+                                <span class="outline__start">insta</span>
+                                
+                                <span class="outline__end">@pscendres</span>
+                            </outline>
+                        </li>
+                        <li>
+                            <outline class="display-block outline flex-row justify-between column-gap--small align-center">
+                                <span class="outline__start">email</span>
+                                
+                                <span class="outline__end">@contact</span>
+                            </outline>
+                        </li>
+                        <li>
+                            <outline class="display-block outline flex-row justify-between column-gap--small align-center">
+                                <span class="outline__start">@lkdn</span>
+                                
+                                <span class="outline__end">linkedin</span>
+                            </outline>
+                        </li>
+                        <li>
+                            <outline class="display-block outline flex-row justify-between column-gap--small align-center">
+                                <span class="outline__start">resume</span>
+                                
+                                <span class="outline__end">online resume</span>
+                            </outline>
+                        </li>
+                    </ul>
+                </div>
+
+                <article class="intro__text">
+                    <p class="quote">
+                        I am a third year student in Multimedia Production Bachelor's degree at Institut des Arts de Diffusion (IAD). I enjoy exploring various art domains by combining technical skills with creative experiences.
+                    </p>
+                </article>
+            </article>
+        </article>
+
+
+
+
+        <article class="section">
+            <article class="carousel flex-column gap--big">
+                <div class="carousel__title">
+                    <h2>
+                        What do I do
+                    </h2>
+                    <div class="carousel__subtitle">
+                        <span class="subtitle">
+                            Medias I am best at
+                        </span>
+                    </div>
+                </div>
+
+                <article class="carousel__categories">
+                    <ul class="unset">
+                        <li>
+                            <article class="category-carousel" id="carousel-3d">
+                                <div class="category-carousel__title">
+                                    <h3>
+                                        3D arts
+                                    </h3>
+                                </div>
+
+                                <ul class="unset category-carousel__list">
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/3D__attic/dawn_CLOSEUP_guitar_V1.jpg" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/3D__character/character_CLOSEUP_chaussures_V1.jpg" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/3D__office/day_V1.jpg" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/di__enclave/jeu2.png" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </article>
+                        </li>
+                        
+
+
+
+                        
+                        <li>
+                            <article class="category-carousel" id="carousel-webdesign">
+                                <div class="category-carousel__title">
+                                    <h3>
+                                        webdesign
+                                    </h3>
+                                </div>
+
+                                <ul class="unset category-carousel__list">
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/web__angelscape/V1.png" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/web__talesofthecity/V1.png" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/web__unfinished/ME1.png" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="category-carousel__img img-carousel">
+                                                <img src="./assets/img/img/projects/web__unfinished/BR1.png" alt="">
+                                                <div class="img-carousel__infos flex-column gap--small">
+                                                    <div class="img-carousel__inner">
+                                                        <h4>here the title</h4>
+                                                        <span class="subtitle">
+                                                            Here some infos shortly
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </article>
+                        </li>
+                    </ul>
+
+
+                    <div class="carousel__cta cta-carousel">
+
+                        <div class="cta-carousel__title">
+                            <h3>
+                                and more
+                            </h3>
+                        </div>
+                        <a href="">
+                            <span class="outline outline--cta trans outline--white">
+                                <span class="">And more</span>
+                                <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg></span>
+                            </span>
+                        </a>
+                    </div>
+                </article>
             </article>
         </article>
     </main>
