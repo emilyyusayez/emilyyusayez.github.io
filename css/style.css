@@ -754,6 +754,7 @@ h6 {
 
  .outline {
     display: inline-flex;
+    align-items: center;
     padding: var(--gutter) var(--gap-small);
     border: var(--border-line-width) solid var(--writing);
     border-radius: var(--border-radius-small);
@@ -786,6 +787,7 @@ h6 {
 
     background: var(--writing);
     color: var(--background);
+    font-weight: 600;
 }
 
 .outline--cta {
@@ -794,7 +796,7 @@ h6 {
     justify-content: flex-end;
     align-items: center;
     column-gap: var(--gap-small);
-    padding: calc(2 * var(--gutter)) var(--gap);
+    padding: calc(1.6 * var(--gutter)) calc(0.8 * var(--gap));
 
     font-size: 1rem;
     font-weight: 300;
@@ -1681,6 +1683,16 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     --padd2: var(--border2);
 }
 
+.skills__splitColumns {
+    --max-width: 30vw;
+}
+
+@media all and (min-width: 1700px) {
+    .skills__splitColumns {
+        --max-width: 30%;
+    }
+}
+
 .content-skills {
     display: grid;
     grid-template:
@@ -1690,7 +1702,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
         ". . l2 . . txt" var(--skills-padd)
         ". . .  . . txt" var(--skills-padd)
         ". . .  . . txt" auto
-        / var(--global-margin) var(--padd2) minmax(auto, 30vw) var(--padd2) var(--padd2) 3fr;
+        / var(--global-margin) var(--padd2) minmax(auto, var(--max-width)) var(--padd2) var(--padd2) 3fr;
         --grid-area-background: 1/1/4/-3;
         --skills-padd: calc(0.5 * var(--padd));
 }
@@ -1704,7 +1716,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .content-skills--3D::before, .content-skills--3D::after {
     content: '';
 
-    border-radius: 0 var(--border2) var(--border2) 0;
+    border-radius: 0 var(--border2) 0 0;
 }
 
 .content-skills__line {
@@ -1763,6 +1775,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 /* -----web */
 
+.skills__web {
+    margin-top: var(--border);
+}
+
 .skills-web__title {
     display: grid;
     grid-template:
@@ -1797,6 +1813,81 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     padding-bottom: var(--padd);
     padding-right: var(--padd);
     border-bottom-right-radius: var(--border2);
+}
+
+
+
+
+
+/* ------ skills cta */
+
+.cta-skills {
+    display: grid;
+
+
+    grid-template:
+        ". . .   .   .   ." var(--border)
+        ". . .   .   .   ." var(--padd)
+        ". . tit tit tit ." auto
+        ". . .   .   .   ." var(--gap-small)
+        ". . but .   txt ." auto
+        ". . .   .   .   ." var(--padd)
+        ". . .   .   .   ." var(--padd)
+        ". . .   .   .   ." var(--border2)
+        / var(--padd) var(--padd) minmax(auto, 30%) var(--padd2) 1fr var(--padd);
+        
+        --grid-area-background: 2/1/-3/-1;
+        --skills-padd: calc(0.5 * var(--padd));
+        --max-width: 30vw;
+}
+
+.cta-skills::before, .cta-skills::after {
+    content: '';
+
+    border-radius: 0 0 0 var(--border2);
+}
+
+@media all and (min-width: 1700px) {
+
+    .cta-skills {
+        padding-right: var(--padd);
+    }
+    .cta-skills::before, .cta-skills::after {
+        border-radius: 0 var(--border2) 0 var(--border2);
+    }
+}
+
+.cta-skills__title {
+    grid-area: tit;
+}
+
+.cta-skills__title h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.cta-skills__button {
+    grid-area: but;
+}
+
+.cta-skills__text {
+    grid-area: txt;
+}
+
+[class^=cta-skills__line] {
+    border-style: solid;
+    border-color: var(--nb1);
+}
+
+.cta-skills__line1 {
+    grid-area: 1/2/-3/3;
+    border-width: 0 0 0 var(--border-line-width);
+}
+
+.cta-skills__line2 {
+    grid-area: -3/2/-1/4;
+    border-width: 0 var(--border-line-width) var(--border-line-width) var(--border-line-width);
+    border-bottom-left-radius: var(--border2);
 }
 
 
