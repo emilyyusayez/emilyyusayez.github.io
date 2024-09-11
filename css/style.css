@@ -105,7 +105,7 @@ html:not(.theme-light) {
     --border-line-width: 2px;
 
     /* --max-width-container: 2200px; */
-    --max-width-container: 1700px;
+    --max-width-container: 2200px;
     
 
 
@@ -150,7 +150,7 @@ html.dark-theme {
     }
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     :root {
         --global-margin: 12vw;
     }
@@ -1024,7 +1024,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     margin: 0 auto;
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     :root {
         --gap-container: clamp(var(--gap4), 8vw, 8vw);
     }
@@ -1172,7 +1172,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     border-radius: 0 0 0 var(--border2);
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .header {
         grid-template:
             ". .    . . .   ." var(--border)
@@ -1255,7 +1255,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     border-left: var(--border-line-width) solid var(--nb1);
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .header__image {
         border-right: var(--border-line-width) solid var(--nb1);
         border-top-right-radius: var(--border-radius);
@@ -1313,7 +1313,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     border-radius: 0 var(--border2) var(--border2) 0;
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .intro {
         grid-template:
             ". tit tit tit ." auto
@@ -1569,7 +1569,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     position: relative;
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .cta--carousel {
         margin-right: 0;
     }
@@ -1631,7 +1631,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
         / var(--global-margin) 1fr var(--global-margin);
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .skills {
         grid-template:
             ". tit  . ." auto
@@ -1687,7 +1687,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     --max-width: 30vw;
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .skills__splitColumns {
         --max-width: 30%;
     }
@@ -1707,7 +1707,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
         --skills-padd: calc(0.5 * var(--padd));
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
     .skills {
         --padd2: var(--border);
     }
@@ -1847,7 +1847,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     border-radius: 0 0 0 var(--border2);
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 2200px) {
 
     .cta-skills {
         padding-right: var(--padd);
