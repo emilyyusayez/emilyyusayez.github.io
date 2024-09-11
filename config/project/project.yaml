@@ -1,0 +1,23 @@
+dateModified: 1726062170
+email:
+  fromEmail: emilyyusayez@gmail.com
+  fromName: portfolio
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    4ed4c12a-0362-4fec-98c1-7ff2e6fad525: portfolio # portfolio
+    29490095-33ce-4ed5-af7d-cace14c3b6b4: 'Public Schema' # Public Schema
+    c23500a7-1673-4ecf-99f6-856c66913df9: Common # Common
+    fc7176d5-ee18-44ad-990b-ddd028a09ded: portfolio # portfolio
+system:
+  edition: solo
+  live: true
+  name: portfolio
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
